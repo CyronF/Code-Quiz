@@ -42,7 +42,7 @@ questionTitle.textContent = questions[currentQuestionIndex].title
   // clear out any old question choices
 choicesEl.innerHTML = "";
   // loop over choices
-ofr (let i = 0; i < currentQuestion.choices.length; i==) {
+for (let i = 0; i < currentQuestion.choices.length; i==) {
   var choice = currentQuestion.choices[i];
 
     // create new button for each choice
