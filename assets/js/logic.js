@@ -74,7 +74,7 @@ function questionClick() {
     var isCorrect = this.dataset.answer === questions[currentQuestionIndex].answer
     if (!isCorrect) {
         //peanilize time
-        time -= 5;
+        time -= 10;
         //display new time on page
         //play wrong sound effect
         sfxWrong.play();
