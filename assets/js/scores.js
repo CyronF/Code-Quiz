@@ -16,4 +16,3 @@ function printHighscores() {
   // attache clear event to clear score button
   
   // run printhighscore when page loads
-  
