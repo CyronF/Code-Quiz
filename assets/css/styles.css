@@ -87,7 +87,6 @@ body {
     right: 10px;
   }
   #user-info {
-      display:none;
       background-color: yellow;
       border-radius: 5px;
       margin-top: 30px;
@@ -97,3 +96,4 @@ body {
       padding: 10px;
       border: 1px solid
   }
+  

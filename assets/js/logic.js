@@ -67,26 +67,35 @@ function getQuestion() {
     // display on the page
 
 function questionClick() {
-    //var isCorrect = this.dataset.answer === questions[currentQuestionIndex].answer
-    if (this.dataset.answer !== questions[currentQuestionIndex].answer) {
+    var isCorrect = this.dataset.answer === questions[currentQuestionIndex].answer;
+   if (!isCorrect) {
+
         //peanilize time
         time -= 10;
         //display new time on page
 
         //play wrong sound effect
         sfxWrong.play();
-        userInfoEl.textContent = "Sorry, wrong answer!"
-        userInfoEl.style.display = "block";
 
-    } 
+        userInfoEl.textContent = "Sorry, wrong answer!"
+        
+    }    
     else {
+
         //play right sound effect
-        sfxRight.play();
-        userInfoEl.textContent = "Correct! Great Job!"
-        userInfoEl.style.display = "block";
+        sfxRight.play(); 
+        userInfoEl.textContent = "Correct! Great Job!!"
     }    
         //flash right/wrong feedback on page for half-second
-        userInfoEl.classList.add('show-info');
+    function hideUserInfo() {
+        userInfoEl.classList.remove("show-info");
+        userInfoEl.innerHTML = "";   
+    }
+
+    //show
+    userInfoEl.classList.remove("show-info")
+    setTimeout(hideUserInfo, 500 )
+    
         //move to next question
 }
    
